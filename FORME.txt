@@ -2,7 +2,9 @@ rails g model Book title:string description:text author:string
 
 rails g controller Books
 
-Gems: simple_form, bootstrap-sass 3.3.7
+Gems: simple_form, bootstrap-sass 3.3.7, devise
 Install simple_form using installation file in homepage link
 Change application.css to application.scss
-form partion; using simple_form gem; simple_form github usage; denoted by:  _form
+devise: read github read me to install
+
+form partial; using simple_form gem; simple_form github usage; denoted by:  _form
