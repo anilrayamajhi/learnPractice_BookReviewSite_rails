@@ -1,7 +1,7 @@
 <h1>INDEX VIEW</h1>
 
 <% @books.each do |el| %>
-  <h2><%= el.title %></h2>
+  <h2><%= link_to el.title, book_path(el)%></h2>
 <% end %>
 
 

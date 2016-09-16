@@ -1,10 +1,12 @@
 class BooksController < ApplicationController
+  before_action :find_book, only: [:show, :edit, :destroy]
+  #before_action will run first and only render things inside find_book private method with find, edit and destroy action; this help to code dry by not repeting code over and over again by simply pointing the actions
+
   def index
     @books = Book.all.order("created_at DESC")
   end
 
   def show
-    @book = Book.find(params[:id])
   end
 
   def new
@@ -18,6 +20,20 @@ class BooksController < ApplicationController
     else
       redirect_to new_book_path
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @book.update(book_params)
+      redirect_to book_path(@book)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
   end
 
   private
