@@ -1,1 +1,8 @@
 <h1>INDEX VIEW</h1>
+
+<% @books.each do |el| %>
+  <h2><%= el.title %></h2>
+<% end %>
+
+
+<%= link_to "Add Book", new_book_path%>
