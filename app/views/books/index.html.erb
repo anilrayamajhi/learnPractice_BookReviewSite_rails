@@ -3,6 +3,3 @@
 <% @books.each do |el| %>
   <h2><%= link_to el.title, book_path(el)%></h2>
 <% end %>
-
-
-<%= link_to "Add Book", new_book_path%>
